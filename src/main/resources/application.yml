@@ -1,0 +1,24 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/library
+        username: postgres
+        password: almaz2002
+
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+springdoc:
+    swagger-ui:
+        path: /api-docs
+server:
+    error:
+        include-message: always
+        include-stacktrace: always
+app:
+    security:
+        jwt:
+            issuer: Almaz
+            secret: it'sveryverysecretword
+            expiresAt: 30
